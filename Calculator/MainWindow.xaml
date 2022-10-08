@@ -1,0 +1,45 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="360" Width="300">
+    
+    <Grid>
+        <UniformGrid >
+            <GroupBox Header="Калькулятор" Margin="10" Padding="5" BorderThickness="2" BorderBrush="Orange">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Значение x" Grid.Column="0" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="value1" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Width="150" Height="40" HorizontalAlignment="Right" VerticalContentAlignment="Center" Margin="3"/>
+                    <Label Content="Значение y" Grid.Row="1" VerticalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="value2" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Width="150" Height="40" HorizontalAlignment="Right" VerticalContentAlignment="Center" Margin="3"/>
+                    <Button Content="+" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" Margin="10,3" Width="40" Height="40" FontSize="16" Click="Button_Click_sum"/>
+                    <Button Content="/" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="1" Margin="10,3" Width="40" Height="40" FontSize="16" Click="Button_Click_delenie"/>
+                    <Button Content="*" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="1" Margin="10,3" Width="40" Height="40" FontSize="16" Click="Button_Click_umnozhenie"/>
+                    <Button Content="xʸ" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1" Margin="10,3" Width="40" Height="40" FontSize="16" Click="Button_Click_stepen"/>
+                    <Button Content="-" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Margin="10,3" Width="40" Height="40" FontSize="16" Click="Button_Click_raznost"/>
+                    <Button Content="x²" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1" Margin="10,3" Width="40" Height="40" FontSize="16" Click="Button_Click_kvadrat"/>
+                    <Button Content="√x" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="1" Margin="10,3" Width="40" Height="40" FontSize="16" Click="Button_Click_koren"/>
+                    <Button Content="AC" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="1" Margin="10,3" Width="40" Height="40" FontSize="16" Click="Button_Click_sbros"/>
+                    <Label Content="Результат" Grid.Row="4" VerticalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="result" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Width="150" Height="40" HorizontalAlignment="Right" VerticalContentAlignment="Center" Margin="3" IsReadOnly="True"/>
+                </Grid>
+            </GroupBox>
+        </UniformGrid>
+    </Grid>
+</Window>
